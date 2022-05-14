@@ -12,15 +12,23 @@ public class Bullet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector3.right * Time.deltaTime * BulettSpeed );
+        if (Player.instance.RLChecker)
+        {
+            transform.Translate(Vector3.right * Time.deltaTime * BulettSpeed);
+        }
+        else
+        {
+            transform.Translate(Vector3.right * -1 *Time.deltaTime * BulettSpeed);
+        }
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Enemy")
         {
-            Destroy(collision.gameObject);
-            Destroy(gameObject);
+            //Destroy(this, collision.gameObject);
+            //Destroy(this, gameObject);
         }
     }
 }

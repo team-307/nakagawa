@@ -166,7 +166,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.8, y: 0}
+  m_Offset: {x: 0, y: -0.66}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -177,7 +177,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.1, y: 1.2}
+  m_Size: {x: 1.2, y: 0.01}
   m_EdgeRadius: 0
 --- !u!212 &218930670
 SpriteRenderer:
@@ -621,7 +621,7 @@ GameObject:
   - component: {fileID: 871787707}
   - component: {fileID: 871787706}
   m_Layer: 0
-  m_Name: enemy_zako1 (1)
+  m_Name: enemy_zako2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -636,12 +636,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 871787705}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 68a23bf242ff4a347b84fc7bda9a192e, type: 3}
+  m_Script: {fileID: 11500000, guid: 8ec1854c93b090545b5bedf1605c3864, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
+  speed: 0
   gravity: 0
-  nonVisibleAct: 1
+  nonVisibleAct: 0
   checkCollision: {fileID: 218930668}
   num: 1
 --- !u!50 &871787707
@@ -664,7 +664,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &871787708
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -678,7 +678,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.03}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -687,9 +687,9 @@ BoxCollider2D:
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_AutoTiling: 1
   serializedVersion: 2
-  m_Size: {x: 1.28, y: 1.28}
+  m_Size: {x: 1.2, y: 1.2}
   m_EdgeRadius: 0.07
 --- !u!212 &871787709
 SpriteRenderer:
@@ -749,12 +749,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 871787705}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 54.72, y: -0.95, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 54.7278, y: -0.9657, z: 0}
+  m_LocalScale: {x: 0.98776615, y: 0.97552234, z: 1}
   m_Children:
   - {fileID: 218930671}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1039846386
 GameObject:
@@ -4283,6 +4283,7 @@ MonoBehaviour:
   LifeCount: {fileID: 1517478956}
   p_life: 3
   isAlive: 1
+  RLChecker: 1
   Xscale: 0.32
   speed: 5.5
   jumpP: 600
@@ -4394,7 +4395,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1049998907}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.5, y: 0.45, z: -1}
+  m_LocalPosition: {x: 48.4, y: 3.7, z: -1}
   m_LocalScale: {x: 0.32, y: 0.3, z: 0.53}
   m_Children: []
   m_Father: {fileID: 0}
@@ -5158,7 +5159,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1877349353
 GameObject:
@@ -5440,12 +5441,12 @@ PrefabInstance:
     - target: {fileID: 6736226708892378653, guid: 82072506ed6eca3478cb6d205b98b8f7,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.33
+      value: 8.07
       objectReference: {fileID: 0}
     - target: {fileID: 6736226708892378653, guid: 82072506ed6eca3478cb6d205b98b8f7,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.23954451
+      value: 0.63
       objectReference: {fileID: 0}
     - target: {fileID: 6736226708892378653, guid: 82072506ed6eca3478cb6d205b98b8f7,
         type: 3}

@@ -30,7 +30,6 @@ public class Enemy_Zako1 : MonoBehaviour
 
     void Update()
     {
-
         pos = transform.position;
 
         // （ポイント）マイナスをかけることで逆方向に移動する。
@@ -48,7 +47,17 @@ public class Enemy_Zako1 : MonoBehaviour
             num = 1;
         }
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Bullet")
+        {
+            this.rb.AddForce(transform.up * 128.0f);
+            this.rb.AddForce(transform.right * 110.0f);
 
+            //Destroy(collision.gameObject);
+            //Destroy(gameObject);
+        }
+    }
 
     ////void FixedUpdate()
     ////{

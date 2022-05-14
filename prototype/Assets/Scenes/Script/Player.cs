@@ -14,7 +14,10 @@ public class Player : MonoBehaviour
 
     // 変数宣言
     public int p_life;                    // ライフ
-    public bool isAlive;                 // 生きているかどうか
+    public bool isAlive;                  // 生きているかどうか
+
+    public static Player instance;
+    public bool RLChecker;            //trueの時右向き
 
     public float Xscale = 0.32f;
     float Yscale = 0.30f;
@@ -32,10 +35,17 @@ public class Player : MonoBehaviour
 
     private SpriteRenderer pRenderer;     // プレイヤーのレンダラー取得
 
-    public GameObject bullet;
+    public GameObject bullet;              //通常弾の設定
     Vector3 createPosition;
 
+    public void Awake()
+    {
+        if(instance == null)
+        {
+            instance = this;
+        }
 
+    }
 
     void Start()
     {
@@ -46,6 +56,8 @@ public class Player : MonoBehaviour
         LifeCount.SetLifeCount(p_life);
 
         isAlive = true;
+
+        RLChecker = true;
 
         canHold = false;
 
@@ -91,14 +103,14 @@ public class Player : MonoBehaviour
         {
             rbody.velocity = new Vector2(-speed, rbody.velocity.y);
             transform.localScale = new Vector3(-Xscale, Yscale, Zscale);
-
+            RLChecker = false;
         }
 
         if (Input.GetKey(KeyCode.D))
         {
             rbody.velocity = new Vector2(speed, rbody.velocity.y);
             transform.localScale = new Vector3(Xscale, Yscale, Zscale);
-
+            RLChecker = true;
         }
 
         // 移動(コントローラー)

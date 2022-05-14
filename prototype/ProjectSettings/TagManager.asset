@@ -10,6 +10,7 @@ TagManager:
   - goal
   - Ground
   - Enemy
+  - Bullet
   layers:
   - Default
   - TransparentFX

@@ -61,6 +61,7 @@
      <Compile Include="Assets\Scenes\Script\Enemy1.cs" />
      <Compile Include="Assets\Scenes\Script\EnemyCollisionCheck.cs" />
      <Compile Include="Assets\Scenes\Script\Enemy_Zako1.cs" />
+     <Compile Include="Assets\Scenes\Script\Enemy_Zako2.cs" />
      <Compile Include="Assets\Scenes\Script\Fire.cs" />
      <Compile Include="Assets\Scenes\Script\Gameover.cs" />
      <Compile Include="Assets\Scenes\Script\Goal.cs" />
